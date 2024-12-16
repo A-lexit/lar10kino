@@ -1,0 +1,22 @@
+Якщо ставляться картинки, то потрібно створити новий фільм і додати і тоді картинки можна змінювати. 
+Також потрібно заново можливо зробити сідування.
+php artisan migrate
+php atrtisan db:seed
+
+
+В PHPStorm:
+vite build
+vite
+
+
+Потрібно спочатку всі сідери, окрім фільмів, а вже потім фільми окремо.
+
+
+option value="{{ $k }}" {{ old('genres', $film->genre_id ) == $k ? "selected" :""}}>{{ $v }}</option>
+
+
+value="{{old('description')}}"
+
+>{{old('description')}}</textarea> 
+{{{ Request::old('content') }}}
+value="{{old('description') ?? $film->description}}"

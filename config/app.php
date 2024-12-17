@@ -170,7 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
-        App\Providers\ViewServiceProvider::class,
+        //App\Providers\ViewServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
 

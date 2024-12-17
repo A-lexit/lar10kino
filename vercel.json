@@ -1,16 +1,6 @@
 {
     "version": 2,
     "framework": null,
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.5.3"
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
-        }
-    ],
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
@@ -37,5 +27,5 @@
         "DB_PASSWORD": "1fkJD45y17"
     },
     "public": true,
-    "buildCommand": "composer install --no-dev && npm install && npm run production"
+    "buildCommand": "npm install && npm run production"
 }

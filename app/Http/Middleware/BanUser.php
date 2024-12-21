@@ -26,6 +26,27 @@ class BanUser
             return redirect('login')->with(Auth::logout());
         }
 
+        //Те ж саме, тільки в switch
+        /*switch (true) {
+            case !Auth::check():
+                Auth::logout();
+                return redirect('login');
+
+            case Auth::user()->statuss == 1:
+                Auth::logout();
+                return redirect('login');
+
+            default:
+                // Ваш код, якщо умови не виконуються
+                break;
+        }*/
+
+
+//Було раніше наче все ок, але як виявилося, перевірка одночасно не підходить
+        /*if(Auth::user()->statuss == 1 && Auth::check()) {
+            return redirect('login')->with(Auth::logout());
+        }*/
+
         //Аналог
         /*if(Auth::user()->statuss == 1 && Auth::check()) {
             return back()->with(Auth::logout());

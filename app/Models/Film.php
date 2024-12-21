@@ -430,9 +430,12 @@ class Film extends Model
 
     public function getDateAttribute($value)
     {
+        if (!$date = Null){
         $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
 
         return $date;
+
+    }
     }
 
 
